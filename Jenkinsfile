@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/gitsss13/jenkins.git'
+              git 'https://github.com/your-username/your-repo.git'
             }
         }
-        stage('Print Message') {
+        stage('Create File') {
             steps {
-                echo 'Hello! Jenkins Pipeline executed successfully'
+              bat 'echo This file is created by Jenkins > demo.txt'
             }
         }
     }
